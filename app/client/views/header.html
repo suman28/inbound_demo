@@ -1,0 +1,63 @@
+      <md-toolbar ng-controller="ResourceController as ctrl" style="background-color: rgb(244,244,244);">
+        <div class="md-toolbar-tools md-whiteframe-z1">
+          <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()" style=" width: 135px;">
+            <img src="public/images/logo.png"/ height=40px; width=135px >
+            
+          </md-button>
+          <!-- <div>
+           <md-button ng-click="toggleLeft()">
+             Toggle left
+           </md-button>
+         </div> -->
+
+          <h2 style="margin-left: 110px; margin-top: 20px;">
+            
+            <md-input-container md-no-float class="md-block" style="display: inline-block;">
+              <input ng-model="user.address" type="text" placeholder="Enter Course Name"  style="display: inline-block;font-size:14px;" >
+             <!--  <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon> -->
+            <i class="material-icons"  style="display: inline-block;color:grey;">search</i>
+            </md-input-container>
+          </h2>
+          <span flex></span>
+         <!--  <div>
+            <md-button ng-click="toggleRight()" class="navbar-button">
+              <i class="material-icons">message</i>
+            </md-button>
+          </div>
+          <div>
+            <md-button ng-click="toggleRight()" class="navbar-button">
+              <i class="material-icons">notifications</i>
+            </md-button>
+          </div> -->
+          <md-menu md-position-mode="target-right target" >
+           <md-button aria-label="Open demo menu" class="image-button" ng-click="$mdOpenMenu($event)" ng-mouseenter="ctrl.openMenu($mdOpenMenu, $event)">
+               <div>
+                 <div><img src="public/images/avatar5.png" class="smcircle-img" style="float:left; "> </div>
+                 <div style="margin-left:50px;"><span class="user_name"></span></div>
+               </div>
+           </md-button>
+
+           <md-menu-content width="4" >
+             <md-menu-item >
+               <md-button ng-click="ctrl.redial($event)">
+                <i class="material-icons md-white-cyan-theme account_menu_icon">settings</i>
+                 Settings
+               </md-button>
+              </md-menu-item>
+               <md-menu-item >
+               <md-button ng-href="#/setPassword">
+                <i class="material-icons md-white-cyan-theme account_menu_icon">person_outline</i>
+                 Profile
+               </md-button>
+              </md-menu-item>
+               <md-divider></md-divider>
+               <md-menu-item >
+               <md-button ng-click="ctrl.redial($event)">
+                <i class="material-icons md-white-cyan-theme account_menu_icon">power_settings_new</i>
+                 Logout
+               </md-button>
+             </md-menu-item>
+           </md-menu-content>
+         </md-menu>
+        </div>
+      </md-toolbar>
